@@ -139,20 +139,23 @@
                     de Componentes</h2>
                 <div class="mermaid-container">
                     <div class="mermaid">
-                        graph TD
-                        subgraph Frontend["🖥️ Frontend (React/Angular)"]
+                        flowchart TD
+                        subgraph Frontend["Frontend (React/Angular)"]
                         UI["Interfaz de Usuario"]
                         Router["Enrutador"]
                         end
-                        subgraph Backend["⚙️ Backend API"]
+
+                        subgraph Backend["Backend API"]
                         Ctrl["Controladores REST"]
                         Svc["Servicios de Negocio"]
                         Repo["Repositorios"]
                         Auth["JWT Filter"]
                         end
-                        subgraph BD["🗄️ Base de Datos"]
-                        DB[(MySQL / PostgreSQL)]
+
+                        subgraph BD["Base de Datos"]
+                        DB[("MySQL / PostgreSQL")]
                         end
+
                         UI --> Ctrl
                         Ctrl --> Svc
                         Svc --> Repo
@@ -205,14 +208,93 @@
                 <div class="mermaid-container">
                     <div class="mermaid">
                         erDiagram
-                        Roles ||--o{ Usuarios : tiene
-                        Usuarios ||--o{ Ventas : registra
-                        Clientes ||--o{ Ventas : realiza
-                        Ventas ||--|{ DetallesVenta : contiene
-                        Productos ||--o{ DetallesVenta : aparece_en
-                        Categorias ||--o{ Productos : agrupa
-                        Proveedores ||--o{ Productos : suministra
-                        Productos ||--o{ MovimientosInventario : genera
+                        ROL ||--o{ USUARIO : tiene
+                        USUARIO ||--o{ VENTA : registra
+                        CLIENTE ||--o{ VENTA : realiza
+                        VENTA ||--|{ DETALLE_VENTA : contiene
+                        PRODUCTO ||--o{ DETALLE_VENTA : aparece_en
+                        CATEGORIA ||--o{ PRODUCTO : agrupa
+                        PROVEEDOR ||--o{ PRODUCTO : suministra
+                        PRODUCTO ||--o{ MOVIMIENTO_INVENTARIO : genera
+
+                        ROL {
+                        int id_rol PK
+                        string nombre_rol
+                        string descripcion
+                        }
+
+                        USUARIO {
+                        int id_usuario PK
+                        string nombre
+                        string email
+                        string contrasena
+                        int id_rol FK
+                        }
+
+                        CLIENTE {
+                        int id_cliente PK
+                        string identificacion
+                        string nombre
+                        string email
+                        string telefono
+                        string direccion
+                        }
+
+                        VENTA {
+                        int id_venta PK
+                        string factura_numero
+                        datetime fecha
+                        decimal subtotal
+                        decimal iva
+                        decimal total
+                        int id_cliente FK
+                        int id_usuario FK
+                        }
+
+                        DETALLE_VENTA {
+                        int id_detalle PK
+                        int cantidad
+                        decimal precio_unitario
+                        decimal subtotal_linea
+                        int id_venta FK
+                        int id_producto FK
+                        }
+
+                        PRODUCTO {
+                        int id_producto PK
+                        string codigo
+                        string nombre
+                        text descripcion
+                        decimal precio
+                        int stock_actual
+                        int stock_minimo
+                        int id_categoria FK
+                        int id_proveedor FK
+                        }
+
+                        CATEGORIA {
+                        int id_categoria PK
+                        string nombre_categoria
+                        string descripcion
+                        }
+
+                        PROVEEDOR {
+                        int id_proveedor PK
+                        string nombre
+                        string contacto
+                        string telefono
+                        string email
+                        string direccion
+                        }
+
+                        MOVIMIENTO_INVENTARIO {
+                        int id_movimiento PK
+                        datetime fecha
+                        enum tipo
+                        int cantidad
+                        string motivo
+                        int id_producto FK
+                        }
                     </div>
                 </div>
             </div>
@@ -350,11 +432,13 @@
                 <div class="row g-3 text-white">
                     <div class="col-md-4">
                         <div class="card-glass"><i class="fas fa-user-cog text-primary me-2"></i>Personal (4 semanas)
-                            <span class="float-end">$4,000</span></div>
+                            <span class="float-end">$4,000</span>
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card-glass"><i class="fas fa-server text-primary me-2"></i>Infraestructura (nube)
-                            <span class="float-end">$400</span></div>
+                            <span class="float-end">$400</span>
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card-glass"><i class="fas fa-globe text-primary me-2"></i>Dominio + SSL <span
