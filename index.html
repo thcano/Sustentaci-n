@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propuesta Técnica - Tecnologías del Futuro</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+    <div class="presentation-container">
+
+        <div class="slide-wrapper">
+
+            <div class="slide active" data-index="0">
+                <div class="text-center" style="margin-top: -30px;">
+                    <div style="font-size: 5rem; color: #60a5fa; margin-bottom: 10px;">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h1 class="display-4 fw-bold text-white" style="letter-spacing: -1px;">
+                        Propuesta Técnica
+                    </h1>
+                    <h2 class="display-6 text-gradient" style="font-weight: 600;">
+                        Sistema de Gestión de Inventarios y Ventas
+                    </h2>
+                    <p class="text-light-muted fs-4 mt-3">
+                        <i class="fas fa-building me-2"></i>Tecnologías del Futuro S.A.S.
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+                        <span class="badge-role"><i class="fas fa-user me-2"></i>Tu Nombre</span>
+                        <span class="badge-role"><i class="fas fa-calendar-alt me-2"></i>Abril 2026</span>
+                        <span class="badge-role"><i class="fas fa-clock me-2"></i>20 min + preguntas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="1">
+                <div class="row g-4 h-100 align-items-center">
+                    <div class="col-md-5">
+                        <h2 class="text-white fw-bold display-6">Agenda</h2>
+                        <p class="text-light-muted fs-5">Recorrido por la solución</p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="card-glass text-center text-white"><i
+                                        class="fas fa-clipboard-list icon-big"></i>
+                                    <p class="fw-semibold">Contexto & requisitos</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-glass text-center text-white"><i class="fas fa-archway icon-big"></i>
+                                    <p class="fw-semibold">Arquitectura & patrones</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-glass text-center text-white"><i class="fas fa-database icon-big"></i>
+                                    <p class="fw-semibold">Modelo de datos</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-glass text-center text-white"><i class="fas fa-rocket icon-big"></i>
+                                    <p class="fw-semibold">Plan & viabilidad</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="2">
+                <div class="row g-4 h-100 align-items-center">
+                    <div class="col-lg-5">
+                        <h2 class="text-white fw-bold"><i class="fas fa-building me-2 text-primary"></i>Contexto</h2>
+                        <p class="text-light-muted fs-5">Tecnologías del Futuro S.A.S.</p>
+                        <ul class="list-unstyled text-white">
+                            <li class="mb-2"><i class="fas fa-map-pin text-primary me-2"></i>Manizales, Caldas</li>
+                            <li class="mb-2"><i class="fas fa-users text-primary me-2"></i>50 empleados</li>
+                            <li class="mb-2"><i class="fas fa-tags text-primary me-2"></i>Retail / E-commerce</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="card-glass text-white">
+                            <h5 class="fw-bold"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Problemas
+                                detectados</h5>
+                            <div class="row mt-3">
+                                <div class="col-md-6"><i class="fas fa-times-circle text-danger me-2"></i>Gestión manual
+                                </div>
+                                <div class="col-md-6"><i class="fas fa-times-circle text-danger me-2"></i>Errores en
+                                    registro</div>
+                                <div class="col-md-6"><i class="fas fa-times-circle text-danger me-2"></i>Sin
+                                    trazabilidad</div>
+                                <div class="col-md-6"><i class="fas fa-times-circle text-danger me-2"></i>Ventas lentas
+                                </div>
+                                <div class="col-md-12 mt-2"><i class="fas fa-times-circle text-danger me-2"></i>Sin
+                                    reportes gerenciales</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="3">
+                <h2 class="text-white fw-bold text-center"><i class="fas fa-lightbulb text-primary me-2"></i>Solución
+                    propuesta</h2>
+                <div class="row g-4 mt-2">
+                    <div class="col-md-4">
+                        <div class="card-glass text-center text-white h-100">
+                            <i class="fas fa-laptop-code icon-big"></i>
+                            <h5>Frontend</h5>
+                            <p class="text-light-muted small">React / Angular<br>SPA + TypeScript</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-glass text-center text-white h-100">
+                            <i class="fas fa-cloud icon-big"></i>
+                            <h5>Backend API</h5>
+                            <p class="text-light-muted small">Spring Boot / Node.js<br>REST + JWT</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-glass text-center text-white h-100">
+                            <i class="fas fa-database icon-big"></i>
+                            <h5>Base de Datos</h5>
+                            <p class="text-light-muted small">MySQL / PostgreSQL<br>Relacional 3FN</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="4">
+                <h2 class="text-white fw-bold text-center"><i class="fas fa-sitemap text-primary me-2"></i>Arquitectura
+                    de Componentes</h2>
+                <div class="mermaid-container">
+                    <div class="mermaid">
+                        graph TD
+                        subgraph Frontend["🖥️ Frontend (React/Angular)"]
+                        UI["Interfaz de Usuario"]
+                        Router["Enrutador"]
+                        end
+                        subgraph Backend["⚙️ Backend API"]
+                        Ctrl["Controladores REST"]
+                        Svc["Servicios de Negocio"]
+                        Repo["Repositorios"]
+                        Auth["JWT Filter"]
+                        end
+                        subgraph BD["🗄️ Base de Datos"]
+                        DB[(MySQL / PostgreSQL)]
+                        end
+                        UI --> Ctrl
+                        Ctrl --> Svc
+                        Svc --> Repo
+                        Repo --> DB
+                        Auth -.-> Ctrl
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="5">
+                <h2 class="text-white fw-bold text-center"><i class="fas fa-puzzle-piece text-primary me-2"></i>Patrones
+                    de Diseño (GoF)</h2>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-4">
+                        <div class="card-glass text-white text-center"><i class="fas fa-cube icon-big"></i>
+                            <h6>Singleton</h6><small class="text-light-muted">Conexión BD</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-glass text-white text-center"><i class="fas fa-file-alt icon-big"></i>
+                            <h6>Factory</h6><small class="text-light-muted">Reportes PDF/Excel</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-glass text-white text-center"><i class="fas fa-bell icon-big"></i>
+                            <h6>Observer</h6><small class="text-light-muted">Alertas stock</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-glass text-white text-center"><i class="fas fa-calculator icon-big"></i>
+                            <h6>Strategy</h6><small class="text-light-muted">Cálculo de IVA</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-glass text-white text-center"><i class="fas fa-database icon-big"></i>
+                            <h6>Repository</h6><small class="text-light-muted">Acceso a datos</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-glass text-white text-center"><i class="fas fa-exchange-alt icon-big"></i>
+                            <h6>DI</h6><small class="text-light-muted">Inyección de dependencias</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="6">
+                <h2 class="text-white fw-bold text-center"><i
+                        class="fas fa-project-diagram text-primary me-2"></i>Modelo Entidad-Relación</h2>
+                <div class="mermaid-container">
+                    <div class="mermaid">
+                        erDiagram
+                        Roles ||--o{ Usuarios : tiene
+                        Usuarios ||--o{ Ventas : registra
+                        Clientes ||--o{ Ventas : realiza
+                        Ventas ||--|{ DetallesVenta : contiene
+                        Productos ||--o{ DetallesVenta : aparece_en
+                        Categorias ||--o{ Productos : agrupa
+                        Proveedores ||--o{ Productos : suministra
+                        Productos ||--o{ MovimientosInventario : genera
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="7">
+                <h2 class="text-white fw-bold text-center"><i class="fas fa-table text-primary me-2"></i>Modelo
+                    Relacional (3FN)</h2>
+                <div class="row g-2 text-white">
+                    <div class="col-4">
+                        <div class="card-glass text-center"><i class="fas fa-id-badge text-primary me-1"></i> Roles
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card-glass text-center"><i class="fas fa-users text-primary me-1"></i> Usuarios
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card-glass text-center"><i class="fas fa-user-tie text-primary me-1"></i> Clientes
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card-glass text-center"><i class="fas fa-tag text-primary me-1"></i> Categorías
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card-glass text-center"><i class="fas fa-truck text-primary me-1"></i> Proveedores
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card-glass text-center"><i class="fas fa-box text-primary me-1"></i> Productos</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card-glass text-center"><i class="fas fa-file-invoice text-primary me-1"></i> Ventas
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card-glass text-center"><i class="fas fa-list text-primary me-1"></i> DetallesVenta
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card-glass text-center"><i class="fas fa-exchange-alt text-primary me-1"></i>
+                            MovimientosInventario</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="8">
+                <h2 class="text-white fw-bold text-center"><i class="fas fa-shield-alt text-primary me-2"></i>Políticas
+                    de Seguridad</h2>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-3">
+                        <div class="card-glass text-center text-white"><i class="fas fa-key icon-big"></i>
+                            <h6>JWT + bcrypt</h6><small class="text-light-muted">Autenticación</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-glass text-center text-white"><i class="fas fa-lock icon-big"></i>
+                            <h6>HTTPS/TLS</h6><small class="text-light-muted">Cifrado</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-glass text-center text-white"><i class="fas fa-user-shield icon-big"></i>
+                            <h6>RBAC</h6><small class="text-light-muted">Roles (Admin, Vendedor, Consultor)</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-glass text-center text-white"><i class="fas fa-history icon-big"></i>
+                            <h6>Auditoría</h6><small class="text-light-muted">Trazabilidad total</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="9">
+                <h2 class="text-white fw-bold text-center"><i
+                        class="fas fa-check-circle text-primary me-2"></i>Cumplimiento de Requisitos</h2>
+                <div class="row g-2 text-white">
+                    <div class="col-6">
+                        <div class="card-glass"><i class="fas fa-check-circle text-success me-2"></i>Gestión de
+                            productos</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card-glass"><i class="fas fa-check-circle text-success me-2"></i>Clientes y
+                            facturación</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card-glass"><i class="fas fa-check-circle text-success me-2"></i>Alertas de stock
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card-glass"><i class="fas fa-check-circle text-success me-2"></i>Reportes PDF/Excel
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card-glass"><i class="fas fa-check-circle text-success me-2"></i>Roles de usuario
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card-glass"><i class="fas fa-check-circle text-success me-2"></i>Auditoría de
+                            transacciones</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="10">
+                <h2 class="text-white fw-bold text-center"><i class="fas fa-calendar-week text-primary me-2"></i>Plan de
+                    Implementación</h2>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-3">
+                        <div class="card-glass text-center text-white">
+                            <h5>Semana 1</h5><small class="text-light-muted">BD + CRUD Productos</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-glass text-center text-white">
+                            <h5>Semana 2</h5><small class="text-light-muted">Clientes + Ventas (POS)</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-glass text-center text-white">
+                            <h5>Semana 3</h5><small class="text-light-muted">Inventario + Alertas</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-glass text-center text-white">
+                            <h5>Semana 4</h5><small class="text-light-muted">Reportes + Pruebas</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="11">
+                <h2 class="text-white fw-bold text-center"><i class="fas fa-coins text-primary me-2"></i>Estimación de
+                    Costos</h2>
+                <div class="row g-3 text-white">
+                    <div class="col-md-4">
+                        <div class="card-glass"><i class="fas fa-user-cog text-primary me-2"></i>Personal (4 semanas)
+                            <span class="float-end">$4,000</span></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-glass"><i class="fas fa-server text-primary me-2"></i>Infraestructura (nube)
+                            <span class="float-end">$400</span></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-glass"><i class="fas fa-globe text-primary me-2"></i>Dominio + SSL <span
+                                class="float-end">$20</span></div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card-glass text-center">
+                            <h5>Total estimado: <span class="text-primary">$4,420 USD</span></h5><small
+                                class="text-light-muted">Retorno de inversión en < 6 meses</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="12">
+                <h2 class="text-white fw-bold text-center"><i
+                        class="fas fa-check-double text-primary me-2"></i>Viabilidad</h2>
+                <div class="row g-4 mt-2">
+                    <div class="col-md-6">
+                        <div class="card-glass text-center text-white"><i class="fas fa-microchip icon-big"></i>
+                            <h5>Técnica</h5>
+                            <p class="text-light-muted small">Stack maduro, comunidad activa, documentación extensa</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-glass text-center text-white"><i class="fas fa-chart-line icon-big"></i>
+                            <h5>Económica</h5>
+                            <p class="text-light-muted small">Inversión moderada, ROI rápido, reducción de pérdidas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="13">
+                <h2 class="text-white fw-bold text-center"><i
+                        class="fas fa-flag-checkered text-primary me-2"></i>Conclusiones</h2>
+                <div class="row g-3 text-white">
+                    <div class="col-md-6">
+                        <div class="card-glass"><i class="fas fa-check-circle text-success me-2"></i>Cubre 100% de
+                            requisitos</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-glass"><i class="fas fa-expand-arrows-alt text-success me-2"></i>Escalable para
+                            el futuro</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-glass"><i class="fas fa-shield-alt text-success me-2"></i>Seguridad integral
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-glass"><i class="fas fa-calendar-check text-success me-2"></i>Entregable en 4
+                            semanas</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="14">
+                <div class="text-center text-white">
+                    <div style="font-size: 5rem; color: #60a5fa; margin-bottom: 20px;">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h2 class="display-4 fw-bold">¡Gracias!</h2>
+                    <p class="fs-4 text-light-muted">¿Preguntas?</p>
+                    <div class="mt-4">
+                        <span class="badge-role"><i class="fas fa-envelope me-2"></i>tuemail@correo.com</span>
+                        <span class="badge-role"><i class="fas fa-phone me-2"></i>+57 300 123 4567</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="nav-controls">
+            <button class="btn-nav" id="prevBtn"><i class="fas fa-chevron-left me-2"></i>Anterior</button>
+            <div class="dots-indicator" id="dotsContainer"></div>
+            <button class="btn-nav" id="nextBtn">Siguiente <i class="fas fa-chevron-right ms-2"></i></button>
+        </div>
+
+    </div>
+
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
